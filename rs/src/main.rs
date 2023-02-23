@@ -7,7 +7,7 @@ const OPENAI_API_KEY: &str = "YOUR_API_KEY";
 async fn generate_text(api: Api, message: Message) {
     let text = message.text.unwrap();
 
-    // Call the OpenAI API to generate text
+    // Call the OpenAI API to generate text. Dont forget for cargo file!
     let response = openai::CompletionBuilder::default()
         .engine("davinci")
         .prompt(text)
